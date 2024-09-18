@@ -33,11 +33,9 @@ spec:
         topology.kubernetes.io/zone: us-east-1a
       volumes:
       - name: vpro-db-data
-        # This AWS EBS volume must already exist.
         awsElasticBlockStore:
           volumeID: vol-0a6f6f755ffa26354
           fsType: ext4
-
       initContainers:
       - name: busybox
         image: busybox:latest
